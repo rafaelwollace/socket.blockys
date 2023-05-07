@@ -20,7 +20,7 @@ let language = 'en';  // Default to English.
     }
   }
   // Load Blockly's language strings.
-  document.write('<script src="./node_modules/blockly/msg/' + language + '.js"></script>\n');
+  document.write('<script src="./blockly/msg/' + language + '.js"></script>\n');
 })();
 
 /**
@@ -84,7 +84,7 @@ function init() {
   // Inject Blockly.
   const workspace = Blockly.inject('blocklyDiv',
       {
-        media: "./node_modules/blockly/media/",
+        media: "./blockly/media/",
         toolbox: toolboxJson,
         rtl: LANGUAGE_RTL.includes(language),
       });
